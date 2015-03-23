@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 body {
-  background-image: radial-gradient(circle farthest-corner at center, #112221 0%, #111111 100%);
+  background-image: radial-gradient(circle farthest-corner at center, #112222 0%, #111111 100%);
 }
 .canvas {
   position: absolute;
@@ -24,78 +24,81 @@ body {
 .line.one {
   left: 0%;
   top: 0%;
-  border-bottom: 10px solid #ff1bac;
-  -webkit-animation: rotate-one 0.5s linear infinite;
-  -moz-animation: rotate-one 0.5s linear infinite;
-  -ms-animation: rotate-one 0.5s linear infinite;
-  -o-animation: rotate-one 0.5s linear infinite;
-  animation: rotate-one 0.5s linear infinite;
+  border-bottom: 12px double #ff1bac;
+  box-shadow: 2px 2px 1px #ff6e1b;
+  -webkit-animation: rotate-one 1s linear infinite;
+  -moz-animation: rotate-one 1s linear infinite;
+  -ms-animation: rotate-one 1s linear infinite;
+  -o-animation: rotate-one 1s linear infinite;
+  animation: rotate-one 1s linear infinite;
 }
 .line.two {
   right: 0%;
   top: 0%;
-  border-right: 10px solid #1bacff;
-  -webkit-animation: rotate-two 0.5s linear infinite;
-  -moz-animation: rotate-two 0.5s linear infinite;
-  -ms-animation: rotate-two 0.5s linear infinite;
-  -o-animation: rotate-two 0.5s linear infinite;
-  animation: rotate-two 0.5s linear infinite;
+  border-right: 12px double #1bacff;
+  box-shadow: 2px 2px 1px #6e1bff;
+  -webkit-animation: rotate-two 1s linear infinite;
+  -moz-animation: rotate-two 1s linear infinite;
+  -ms-animation: rotate-two 1s linear infinite;
+  -o-animation: rotate-two 1s linear infinite;
+  animation: rotate-two 1s linear infinite;
 }
 .line.three {
   right: 0%;
   top: 0%;
-  border-top: 10px solid #ff6e1b;
-  -webkit-animation: rotate-three 0.5s linear infinite;
-  -moz-animation: rotate-three 0.5s linear infinite;
-  -ms-animation: rotate-three 0.5s linear infinite;
-  -o-animation: rotate-three 0.5s linear infinite;
-  animation: rotate-three 0.5s linear infinite;
+  border-left: 12px double #ff6e1b;
+  box-shadow: -2px -2px 1px #acff1b;
+  -webkit-animation: rotate-three 1s linear infinite;
+  -moz-animation: rotate-three 1s linear infinite;
+  -ms-animation: rotate-three 1s linear infinite;
+  -o-animation: rotate-three 1s linear infinite;
+  animation: rotate-three 1s linear infinite;
 }
 @-webkit-keyframes rotate-one {
   0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    transform: rotateX(45deg) rotateY(-45deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-one {
   0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    transform: rotateX(45deg) rotateY(-45deg) rotateZ(360deg);
   }
 }
 @-webkit-keyframes rotate-two {
   0% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    transform: rotateX(70deg) rotateY(5deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    transform: rotateX(70deg) rotateY(5deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-two {
   0% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    transform: rotateX(70deg) rotateY(5deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    transform: rotateX(70deg) rotateY(5deg) rotateZ(360deg);
   }
 }
 @-webkit-keyframes rotate-three {
   0% {
-    transform: rotateX(35deg) rotateY(50deg) rotateZ(0deg);
+    transform: rotateX(45deg) rotateY(50deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(35deg) rotateY(50deg) rotateZ(360deg);
+    transform: rotateX(45deg) rotateY(50deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-three {
   0% {
-    transform: rotateX(35deg) rotateY(50deg) rotateZ(0deg);
+    transform: rotateX(45deg) rotateY(50deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(35deg) rotateY(50deg) rotateZ(360deg);
+    transform: rotateX(45deg) rotateY(50deg) rotateZ(360deg);
   }
 }

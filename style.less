@@ -4,11 +4,15 @@
 @first-color: spin(@base-color, 60);
 @second-color: spin(@base-color, -60);
 @third-color: spin(@base-color, 120);
+@first-shadow-color: spin(@first-color, 60);
+@second-shadow-color: spin(@second-color, 60);
+@third-shadow-color: spin(@third-color, 60);
+
 html {
 	height: 100%;
 }
 body {
-	background-image: radial-gradient(circle farthest-corner at center, #112221 0%, #111111 100%);
+	background-image: radial-gradient(circle farthest-corner at center, #122 0%, #111 100%);
 }
 .canvas {
 	position: absolute;
@@ -36,42 +40,43 @@ body {
 	&.one {
 		left: 0%;
 		top: 0%;
-		border-bottom: 10px solid @first-color;
-		.animation(rotate-one, 0.5s);		 
+		border-bottom: 12px double @first-color;
+		box-shadow: 2px 2px 1px @first-shadow-color;
+		.animation(rotate-one, 1s);		 
 	}
 	&.two {
 		right: 0%;
 		top: 0%;
-		border-right: 10px solid @second-color;
-		.animation(rotate-two, 0.5s);
+		border-right: 12px double @second-color;
+		box-shadow: 2px 2px 1px @second-shadow-color;
+		.animation(rotate-two, 1s);
 	}
 	&.three {
 		right: 0%;
 		top: 0%;
-		border-top: 10px solid @third-color;
-		.animation(rotate-three, 0.5s);
+		border-left: 12px double @third-color;
+		box-shadow: -2px -2px 1px @third-shadow-color;
+		.animation(rotate-three, 1s);
 	}
 }
 
+.rotate(@x,@y){
+	0% {
+		transform: rotateX(@x) rotateY(@y) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(@x) rotateY(@y) rotateZ(360deg);
+	}
+}
 .keyframes(@rotate-name, @x, @y){
 	@-webkit-keyframes @rotate-name {
-		0% {
-			transform: rotateX(@x) rotateY(@y) rotateZ(0deg);
-		}
-		100% {
-			transform: rotateX(@x) rotateY(@y) rotateZ(360deg);
-		}
+		.rotate(@x,@y);
 	}
 	@keyframes @rotate-name {
-		0% {
-			transform: rotateX(@x) rotateY(@y) rotateZ(0deg);
-		}
-		100% {
-			transform: rotateX(@x) rotateY(@y) rotateZ(360deg);
-		}
+		.rotate(@x,@y);
 	}
 }
 
-.keyframes(rotate-one, 35deg, -45deg);
-.keyframes(rotate-two, 50deg, 10deg);
-.keyframes(rotate-three, 35deg,  50deg);
+.keyframes(rotate-one, 45deg, -45deg);
+.keyframes(rotate-two, 70deg, 5deg);
+.keyframes(rotate-three, 45deg,  50deg);
