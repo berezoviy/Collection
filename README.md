@@ -1,1 +1,1 @@
-<a href="http://berezoviy.github.io/Collection/RoundNavigation/index.html/">SwirlingLines Online Demo</a>
+<a href="http://berezoviy.github.io/Collection/">SwirlingLines Online Demo</a>
