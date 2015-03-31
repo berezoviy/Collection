@@ -3,22 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Your title of page</title>
-
+	<meta property="og:title" content="Your TITLE" />
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({
+		publisher: "f2ed59d6-ab19-4626-80d9-5a405ce600a7",
+		popup: true,
+		doNotHash: false,
+		doNotCopy: false,
+		hashAddressBar: false
+	});</script>
 </head>
 <body>
+<br>
 <span class='st_pinterest_hcount' displayText='Pinterest' st_title='YOUR TITLE' st_summary='YOUR TEXT'></span>
 <span class='st_twitter_hcount' displayText='Tweet' st_title='YOUR TITLE' st_summary='YOUR TEXT' st_url="some url or default" st_via='[@sometwitter]'></span>
-<span class='st_facebook_hcount' displayText='Facebook' st_title='YOUR TITLE' st_summary='YOUR TEXT'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_title='YOUR TITLE' st_summary='YOUR TEXT' href="javascript:fbShare('http://jsfiddle.net/stichoza/EYxTJ/', 'Fb Share', 'Facebook share popup', 'http://goo.gl/dS52U', 520, 350></span>
 <span class='st_fblike_hcount' displayText='Facebook Like' st_title='YOUR TITLE'></span>
 
-
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">
-    stLight.options({
-        publisher: '12345',
-        popup: 'true'
-    });
+<script>
+    function fbShare(url, title, descr, image, winWidth, winHeight) {
+        var winTop = (screen.height / 2) - (winHeight / 2);
+        var winLeft = (screen.width / 2) - (winWidth / 2);
+        window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+    }
 </script>
-
 </body>
 </html>
