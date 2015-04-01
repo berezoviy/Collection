@@ -3,23 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Your title of page</title>
-	<meta property="og:title" content="Your TITLE" />
-	<style type="text/css">
- 
-	#share-buttons img {
-	width: 35px;
-	padding: 5px;
-	border: 0;
-	box-shadow: 0;
-	display: inline;
-	}
-	 
-	</style>
+
+</style>
 
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/uk_UA/sdk.js#xfbml=1&appId=1496450733936471&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Pinterest -->
+<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="images/pinterest.png"alt="Pinterest" /></a>
+
+<!-- Twitter -->
+<a href="http://twitter.com/share?url=ENTER_YOUR_URL_HERE&text=ENTER_YOU_TEXT_FOR_TWEET&hashtags=ENTER_YOUR_TAG" target="popup"   onclick="window.open('http://twitter.com/share?url=ENTER_YOUR_URL_HERE&text=ENTER_YOU_TEXT_FOR_TWEET&hashtags=ENTER_YOUR_TAG','popup','width=600,height=600'); return false;"><img src="images/twitter.png" alt="Twitter" /></a>
+
  <!-- Facebook -->
-<a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" target="popup"   onclick="window.open('http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}','popup','width=600,height=600'); return false;"><img src="images/facebook.png" alt="Facebook" /></a>
- 
+<a href="http://www.facebook.com/sharer.php?u=ENTER_YOUR_URL" target="popup"   onclick="window.open('http://www.facebook.com/sharer.php?u=ENTER_YOUR_URL','popup','width=600,height=600'); return false;"><img src="images/facebook.png" alt="Facebook" /></a>
+<div class="fb-like" data-href="http://fatlossformula.net/irshak/index1.html" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 </body>
 </html>
